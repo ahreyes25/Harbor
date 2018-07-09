@@ -1,8 +1,8 @@
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 // Draw each corner of the spell board border
 
-var centerConstantX = room_width / 2 - 1;
-var centerConstantY = 28;
+var centerConstantX = ViewWidth() / 2 - 1;
+var centerConstantY = oPuzzleBoard.gridY + 17;
 var xCornerOffset	= oPuzzleBoard.gridWidth  * oPuzzleBoard.gridPadding / 2;
 var yCornerOffset	= oPuzzleBoard.gridHeight * oPuzzleBoard.gridPadding / 2;
 

@@ -6,8 +6,7 @@
     "children": [
         "2cc55469-0d58-4a7d-add6-d7b58a185052",
         "7a1ce9c4-444b-4dbe-840e-05cfca80a206",
-        "df57866e-4635-4704-a499-6d537c5f4219",
-        "964d22a1-edb3-4aa7-bd64-6c553dd8d271"
+        "df57866e-4635-4704-a499-6d537c5f4219"
     ],
     "filterType": "GMSprite",
     "folderName": "CombatZone",

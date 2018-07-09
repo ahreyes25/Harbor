@@ -1,24 +1,25 @@
 // Grid Variables
+elementScale	= 1;
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+gridWidthMin	= 4;
+gridWidthMax	= 12;
+gridHeightMin	= 3;
+gridHeightMax	= 7;
+gridWidth		= irandom_range(gridWidthMin,  gridWidthMax);
+gridHeight		= irandom_range(gridHeightMin, gridHeightMax);
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 // These need to change to be dynamic for different sized displays
-gridOffsetConstantX = room_width / 2 - 40;
-gridOffsetConstantY = 11;
-gridPadding			= 7;
+gridPadding		= 7  * elementScale;
 
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-gridWidthMin		= 4;
-gridWidthMax		= 12;
-gridHeightMin		= 3;
-gridHeightMax		= 7;
-gridWidth			= irandom_range(gridWidthMin,  gridWidthMax);
-gridHeight			= irandom_range(gridHeightMin, gridHeightMax);
+gridX			= (ViewWidth() / 2) - (gridWidth * gridPadding / 2);
+gridY			= 11 * elementScale;
 
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-gridOffsetCenterX	= ((gridWidthMax  - gridWidth)		* gridPadding) / 2;
-gridOffsetCenterY	= ((gridHeightMax - gridHeight - 1) * gridPadding) / 2;
-gridXOffset			= gridOffsetConstantX + gridOffsetCenterX;
-gridYOffset			= gridOffsetConstantY + gridOffsetCenterY;
+gridCenterX		= gridWidth  * gridPadding / 2;
+gridCenterY		= gridHeight * gridPadding / 2;
+
+gridWidthX		= gridWidth  * gridPadding;
+gridHeightY		= gridHeight * gridPadding;
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 // Cursor X & Y Position in Grid

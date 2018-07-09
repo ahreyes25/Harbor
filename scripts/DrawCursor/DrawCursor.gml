@@ -1,9 +1,6 @@
 /// @description Draw cursor on puzzle board that is used to select spells
-
-var xoConstant = room_width / 2 - 44;	// x offset, this is adjusted to the board
-var yoConstant = 7;						// y offset, this is adjusted to the board
-var xo = xoConstant + oPuzzleBoard.gridOffsetCenterX;
-var yo = yoConstant + oPuzzleBoard.gridOffsetCenterY;
+var xo = oPuzzleBoard.gridX - 2;//xoConstant + oPuzzleBoard.gridCenterX;
+var yo = oPuzzleBoard.gridY - 1;//yoConstant + oPuzzleBoard.gridCenterY;
 
 var ind = oCombatManager.turnControllerObject.currentPlayerTurn.spellBook.index;
 var sp  = oCombatManager.turnControllerObject.currentPlayerTurn.spellBook.data[ind];
@@ -105,5 +102,5 @@ var flp = global.spellData[sp, spellC.FlipOrientation];
 if (!oCombatManager.combatMenu.inSpellBook && !oPuzzleBoard.inCombatMenu && oCombatManager.combatMenu.attacking) {	
 	draw_sprite_ext(cursorSprite, 0,((global.gridIndexX + cursorWidth  - (1 * cursorWidth))  * oPuzzleBoard.gridPadding) + xo + rxoff,
 									((global.gridIndexY + cursorHeight - (1 * cursorHeight)) * oPuzzleBoard.gridPadding) + yo + ryoff,
-									flp, 1, rot, c_white, 1);
+									flp * oPuzzleBoard.elementScale, oPuzzleBoard.elementScale, rot, c_white, 1);
 }

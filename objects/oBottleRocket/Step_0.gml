@@ -11,7 +11,7 @@ var cYellow = make_color_rgb(255, 242, 0);
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 // Right
 if (dir == "right") {
-	if (x < room_width + 10)
+	if (x < ViewWidth() + 10)
 		x+= bottleSpeed;
 	y += irandom_range(-1, 1); // shake
 	
@@ -52,7 +52,7 @@ if (dir == "right") {
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 // Down
 else if (dir == "down") {
-	if (y < room_height + 10)
+	if (y < ViewHeight() + 10)
 		y+= bottleSpeed;
 	x += irandom_range(-1, 1); // shake
 	
@@ -174,9 +174,9 @@ else if (dir == "up") {
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 // destroy once out of room
-if (x > room_width ||
+if (x > ViewWidth() ||
 	x < 0 ||
-	y > room_height ||
+	y > ViewHeight() ||
 	y < 0) {
 		alarm[0] = 120;
 		instance_destroy();

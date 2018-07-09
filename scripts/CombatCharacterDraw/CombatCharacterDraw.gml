@@ -6,7 +6,7 @@ if (id.state == "applyEffect") {
 	image_index  = id.image_index;
 	sprite_index = idleSprite;
 	image_xscale = facing;
-	image_yscale = 1;
+	image_yscale = yscale;
 	draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, 0, c_white, 1);
 }
 
@@ -16,7 +16,7 @@ if (id.state == "idle") {
 	image_index  = id.image_index;
 	sprite_index = idleSprite;
 	image_xscale = facing;
-	image_yscale = 1;
+	image_yscale = yscale;
 	draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, 0, c_white, 1);
 }
 
@@ -27,7 +27,7 @@ if (id.state == "chargingSpell") {
 	image_index  = id.image_index;
 	sprite_index = idleSprite;
 	image_xscale = facing;
-	image_yscale = 1;
+	image_yscale = yscale;
 	draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, 0, c_white, 1);
 }
 
@@ -37,7 +37,7 @@ if (id.state == "hurt") {
 	image_index  = id.image_index;
 	sprite_index = hurtSprite;
 	image_xscale = facing;
-	image_yscale = 1;
+	image_yscale = yscale;
 	draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, 0, c_white, 1);
 }
 
@@ -47,7 +47,7 @@ if (id.state == "attacking") {
 	image_index  = id.image_index;
 	sprite_index = attackSprite;
 	image_xscale = facing;
-	image_yscale = 1;
+	image_yscale = yscale;
 	draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, 0, c_white, 1);
 }
  
@@ -57,7 +57,7 @@ if (id.state == "usingItem") {
 	image_index  = id.image_index;
 	sprite_index = idleSprite;
 	image_xscale = facing;
-	image_yscale = 1;
+	image_yscale = yscale;
 	draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, 0, c_white, 1);
 }
 
@@ -67,7 +67,7 @@ if (id.state == "waiting") {
 	image_index  = id.image_index;
 	sprite_index = idleSprite;
 	image_xscale = facing;
-	image_yscale = 1;
+	image_yscale = yscale;
 	
 	// Draw attacking animation until spell object is gone
 	if (instance_exists(oSpellObject) && oSpellObject.image_xscale == id.image_xscale && 
@@ -76,7 +76,7 @@ if (id.state == "waiting") {
 			image_index  = id.image_index;
 			sprite_index = attackSprite;
 			image_xscale = facing;
-			image_yscale = 1;
+			image_yscale = yscale;
 	}
 	draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, 0, c_white, 1);
 }
@@ -87,9 +87,9 @@ if (id.state == "endTurn") {
 	image_index  = id.image_index;
 	sprite_index = idleSprite;
 	image_xscale = facing;
-	image_yscale = 1;
+	image_yscale = yscale;
 	draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, 0, c_white, 1);
 }
 
-draw_sprite_ext(sHeart, 0, startingX, combatZone.y + 4, 1, 1, 0, c_white, 1);
-draw_text_transformed(startingX - 3, combatZone.y + 8, currentHealth, 0.3, 0.3, 0);
+//draw_sprite_ext(sHeart, 0, startingX, combatZone.y + 4, xscale, yscale, 0, c_white, 1);
+//draw_text_transformed(startingX - 3, combatZone.y + 8, currentHealth, 0.3, 0.3, 0);
