@@ -1,9 +1,9 @@
 /// @description 
 /*
-y = SmoothStep(y, ViewHeight() / 2, 0.9);
+y = SmoothStep(y, room_height / 2, 0.9);
 
 // Move to half way point
-if (y <= ViewHeight() / 2 + 16) {
+if (y <= room_height / 2 + 16) {
 	if (alarm[0] < 0)
 		alarm[0] = 45;
 }

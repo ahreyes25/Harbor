@@ -24,14 +24,7 @@
         "0b099ab9-cc7c-4ae5-af51-f42f715d2f9b",
         "1661a38b-dd81-4643-932f-32c2e989ab85",
         "333e912e-79e3-4391-a231-9d92ab8dde21",
-        "3a2c4c57-7256-485a-8187-bc4730495b5b",
-        "32875ef5-fd63-45a3-af22-3cd8052a4469",
-        "06a1bffa-8ae6-474f-80e8-20a325862239",
-        "67b6aacd-87da-4f62-84ea-b8487a05a4ba",
-        "6fc2475b-9c44-44f2-905a-66f64d63aa25",
-        "a2c08778-a789-4c0e-8afa-1f63cd502b71",
-        "12ec6eea-f100-42a0-9706-bd7e80e42c95",
-        "a159e724-c58a-4d0f-9cd7-f96a53817cdd"
+        "3a2c4c57-7256-485a-8187-bc4730495b5b"
     ],
     "filterType": "GMSound",
     "folderName": "Board",

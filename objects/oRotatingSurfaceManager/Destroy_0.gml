@@ -1,5 +1,5 @@
-var xx = (0 * oPuzzleBoard.gridPadding) + oPuzzleBoard.gridX - oPuzzleBoard.gridPadding;
-var yy = (0 * oPuzzleBoard.gridPadding) + oPuzzleBoard.gridY - oPuzzleBoard.gridPadding;
+var xx = (0 * oPuzzleBoard.gridPadding) + oPuzzleBoard.gridXOffset - oPuzzleBoard.gridPadding;
+var yy = (0 * oPuzzleBoard.gridPadding) + oPuzzleBoard.gridYOffset - oPuzzleBoard.gridPadding;
 var ww = oPuzzleBoard.gridWidth			* oPuzzleBoard.gridPadding + oPuzzleBoard.gridPadding;
 var hh = oPuzzleBoard.gridHeight		* oPuzzleBoard.gridPadding + oPuzzleBoard.gridPadding;
 var mx = ww / 2;

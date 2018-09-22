@@ -11,7 +11,7 @@ var sp  = oCombatManager.turnControllerObject.currentPlayerTurn.spellBook.data[i
 var caster = oCombatManager.turnControllerObject.currentPlayerTurn.id;
 var target = oCombatManager.turnControllerObject.currentPlayerTurn.attackTarget;
 
-if (caster.x > ViewWidth() / 2)
+if (caster.x > room_width / 2)
 	var side = -1;
 else
 	var side = 1;
@@ -62,7 +62,7 @@ switch(global.spellData[sp, spellC.SpellID]) {
 		i.owner = oCombatManager.turnControllerObject.currentPlayerTurn;
 	break;
 	case 5: // flood
-		var i = instance_create_layer(64, ViewHeight(), "GameLayer", oSpellObject);
+		var i = instance_create_layer(64, room_height, "GameLayer", oSpellObject);
 		i.damageToDeal = d;
 		i.owner = oCombatManager.turnControllerObject.currentPlayerTurn;
 	break;

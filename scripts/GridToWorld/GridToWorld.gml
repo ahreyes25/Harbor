@@ -7,6 +7,6 @@ var coord = argument0;
 var xOrY  = argument1; 
 
 if (xOrY == "x")
-	return ((coord * oPuzzleBoard.gridPadding) + oPuzzleBoard.gridX);
+	return ((coord * oPuzzleBoard.gridPadding) + oPuzzleBoard.gridXOffset);
 else if (xOrY == "y")
-	return ((coord * oPuzzleBoard.gridPadding) + oPuzzleBoard.gridY);
+	return ((coord * oPuzzleBoard.gridPadding) + oPuzzleBoard.gridYOffset);

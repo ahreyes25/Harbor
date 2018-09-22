@@ -11,9 +11,9 @@ var v;
 
 // get value
 if (xOrY == "x")
-	v = ((coord - oPuzzleBoard.gridX) / oPuzzleBoard.gridPadding);
+	v = ((coord - oPuzzleBoard.gridXOffset) / oPuzzleBoard.gridPadding);
 else if (xOrY == "y")
-	v = ((coord - oPuzzleBoard.gridYO) / oPuzzleBoard.gridPadding);	
+	v = ((coord - oPuzzleBoard.gridYOffset) / oPuzzleBoard.gridPadding);	
 
 // do roounding
 if (r == "down")

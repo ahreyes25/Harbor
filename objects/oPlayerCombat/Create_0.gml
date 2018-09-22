@@ -16,13 +16,11 @@ skillTree		= object_get_parent(id).skillTree;
 idleSprite		= noone;
 hurtSprite		= noone;
 attackSprite	= noone;
-xscale			= 1;
-yscale			= 1;
 
-if (x > ViewWidth() / 2)
-	facing = -xscale;
+if (x > room_width / 2)
+	facing = -1;
 else
-	facing = xscale;
+	facing = 1;
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 // Other

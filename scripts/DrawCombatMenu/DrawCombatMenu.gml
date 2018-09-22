@@ -1,4 +1,4 @@
-var scx = ViewWidth() / 2;
+var scx = room_width / 2;
 var scy = (sprite_get_height(sCombatMenuUI) / 2) + (oPuzzleBoard.gridPadding * 1.5);
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
