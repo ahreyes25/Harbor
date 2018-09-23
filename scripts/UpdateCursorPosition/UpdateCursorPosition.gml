@@ -4,7 +4,6 @@ Input();
 var ind = oCombatManager.turnControllerObject.currentPlayerTurn.spellBook.index;
 var sp  = oCombatManager.turnControllerObject.currentPlayerTurn.spellBook.data[ind];
 
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 // Check for spell rotation
 if (global.spellData[sp, spellC.Orientation] == 0 || abs(global.spellData[sp, spellC.Orientation]) == 180) {
 	var cursorWidth  = global.spellData[sp, spellC.CursorWidth];
@@ -17,7 +16,6 @@ else {
 
 // Not in spell book, currently in grid
 if (!oPuzzleBoard.inCombatMenu && oCombatManager.combatMenu.attacking && !oCombatManager.combatMenu.inSpellBook){ 
-	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 	// Right arrow in grid pressed
 	if (rightPressed){
 		audio_play_sound(soCursorSlideFree, 0, 0);
@@ -29,7 +27,6 @@ if (!oPuzzleBoard.inCombatMenu && oCombatManager.combatMenu.attacking && !oComba
 		}
 	}
 	
-	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 	// Left arrow in grid pressed
 	else if (leftPressed){
 		audio_play_sound(soCursorSlideFree, 0, 0);
@@ -41,7 +38,6 @@ if (!oPuzzleBoard.inCombatMenu && oCombatManager.combatMenu.attacking && !oComba
 		}
 	}
 	
-	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 	// Up arrow in grid pressed
 	else if (upPressed){
 		audio_play_sound(soCursorSlideFree, 0, 0);
@@ -52,8 +48,7 @@ if (!oPuzzleBoard.inCombatMenu && oCombatManager.combatMenu.attacking && !oComba
 			global.gridIndexY = oPuzzleBoard.gridHeight - cursorHeight;	
 		}
 	}
-	
-	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
 	// Down arrow in grid pressed
 	else if (downPressed /*&& global.gridIndexY != oPuzzleBoard.gridHeight - cursorHeight*/){
 		audio_play_sound(soCursorSlideFree, 0, 0);
@@ -64,15 +59,13 @@ if (!oPuzzleBoard.inCombatMenu && oCombatManager.combatMenu.attacking && !oComba
 			global.gridIndexY = 0;	
 		}
 	}
-	
-	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
 	// Enter spell book
 	if (action2Pressed) {
 		oCombatManager.combatMenu.inSpellBook = true;
 	}
 }
 
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 // Exit spell book by pressing A
 else if (!oPuzzleBoard.inCombatMenu && oCombatManager.combatMenu.attacking && oCombatManager.combatMenu.inSpellBook) {
 	// Exit out of spellbook into puzzle grid

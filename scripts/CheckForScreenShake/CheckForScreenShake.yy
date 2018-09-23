@@ -1,8 +1,8 @@
 {
-    "id": "07187284-1fbf-41ce-abef-ef15c61eede1",
+    "id": "feb30750-e109-4d3b-b401-1fe07898402c",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "CombatCharacterAlarm0",
+    "name": "CheckForScreenShake",
     "IsCompatibility": false,
     "IsDnD": false
 }

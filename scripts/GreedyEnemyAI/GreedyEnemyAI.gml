@@ -1,4 +1,3 @@
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 /// @description A basic enemy AI that searches for the most powerful potential spell no matter what.
 
 // Calculating the strongest spell
@@ -9,7 +8,6 @@ var strongestSpellRot;
 var strongestSpellFlip;
 var maxDam = 0;
 
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 // check the grid for each spell in current enemies spell book
 for (var i = 0; i < array_length_1d(oCombatManager.turnControllerObject.currentPlayerTurn.spellBook.data); i++) {
 	// Update spell book index
@@ -47,8 +45,7 @@ for (var i = 0; i < array_length_1d(oCombatManager.turnControllerObject.currentP
 				// Check for non-chain spells
 				else {
 					// Compute average potential damage
-					var avgDam = (global.spellData[sp, spellC.DamageLow] +
-								global.spellData[sp, spellC.DamageHigh]) / 2;
+					var avgDam = (global.spellData[sp, spellC.DamageLow] + global.spellData[sp, spellC.DamageHigh]) / 2;
 						
 					// Store it, if this avg is greater
 					if (avgDam >= maxDam) {
@@ -68,7 +65,6 @@ for (var i = 0; i < array_length_1d(oCombatManager.turnControllerObject.currentP
 	}	
 }
 
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 // Set variables
 oCombatManager.turnControllerObject.currentPlayerTurn.searchedForSpell = true;
 oCombatManager.turnControllerObject.currentPlayerTurn.spellToCast	  = strongestSpell;
@@ -78,7 +74,6 @@ oCombatManager.turnControllerObject.currentPlayerTurn.spellRot		  = strongestSpe
 oCombatManager.turnControllerObject.currentPlayerTurn.spellFlip		  = strongestSpellFlip;
 // rotation and flipping set in AICheckSpellForms();
 
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 // Navigate to spell and cast it
 if (oCombatManager.turnControllerObject.currentPlayerTurn.alarm[1] == -1)
 	oCombatManager.turnControllerObject.currentPlayerTurn.alarm[1] = 10;

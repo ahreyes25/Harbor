@@ -1,1 +1,1 @@
-ScreenShake();
+CheckForScreenShake();

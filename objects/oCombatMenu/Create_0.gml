@@ -1,4 +1,3 @@
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 // Combat Menu Navigation
 attack				= false;
 item				= false;

@@ -1,6 +1,5 @@
 /// @description Get user input
 
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 // Get keyboard input 
 leftPressed		= keyboard_check_pressed(ord("A"));
 upPressed		= keyboard_check_pressed(ord("W"));

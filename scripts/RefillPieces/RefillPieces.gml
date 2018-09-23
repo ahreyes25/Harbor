@@ -4,7 +4,6 @@
 var g = global.grid;
 randomize();
 
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 // Set grid to slide values down
 for (var i = oPuzzleBoard.gridWidth - 1; i >= 0; i--){ // loop through grid
 	for (var j = oPuzzleBoard.gridHeight - 1; j >= 0; j--){

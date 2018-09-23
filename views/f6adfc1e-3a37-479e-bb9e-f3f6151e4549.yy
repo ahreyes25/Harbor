@@ -10,7 +10,7 @@
         "97658ff6-ca86-41f3-9e1f-fd949c7e2100"
     ],
     "filterType": "GMScript",
-    "folderName": "CombatZone",
+    "folderName": "Combat",
     "isDefaultView": false,
     "localisedFolderName": ""
 }

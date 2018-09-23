@@ -2,7 +2,6 @@
 var ind = oCombatManager.turnControllerObject.currentPlayerTurn.spellBook.index;
 var sp	= oCombatManager.turnControllerObject.currentPlayerTurn.spellBook.data[ind];
 
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 // Search through spell book data for matching spell
 for (var i = 0; i < array_length_1d(spellBook.data); i++) {
 	if (spellBook.data[i] == spellToCast) {
@@ -10,7 +9,6 @@ for (var i = 0; i < array_length_1d(spellBook.data); i++) {
 	}
 }
 
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 // Check if rotation is correct first
 if (global.spellData[sp, spellC.Orientation] != spellRot) {
 	// Rotate spell
@@ -25,7 +23,6 @@ if (global.spellData[sp, spellC.Orientation] != spellRot) {
 	alarm[1] = irandom_range(8, 18);
 }
 else {
-	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 	// Check if flipping is correct then
 	if (global.spellData[sp, spellC.FlipOrientation] != spellFlip) {
 		
@@ -37,7 +34,6 @@ else {
 		alarm[1] = irandom_range(10, 20);
 	}
 	else {
-		// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 		// Move out of spell book
 		if (global.spellData[spellToCast, spellC.Orientation] == 0 || global.spellData[spellToCast, spellC.Orientation] == 180)
 			var cursorHeight = global.spellData[spellToCast, spellC.CursorHeight];

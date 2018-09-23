@@ -1,5 +1,5 @@
 /// @description Shuffle Item
-if (oCombatManager.turnControllerObject.currentPlayerTurn.id.state != "usingItem") {
+if (oCombatManager.turnControllerObject.currentPlayerTurn.id.state != characterState.usingItem) {
 	alarm[1] = 1;
 }
 else {

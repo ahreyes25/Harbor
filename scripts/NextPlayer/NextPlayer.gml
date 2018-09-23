@@ -17,12 +17,11 @@ else {
 	UpdateTeamOrder();
 	UpdateNextPlayerInLine();
 	UpdatePreviousPlayerInLine();
-	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-	// Set Player States
-	oCombatManager.turnControllerObject.currentPlayerTurn.id.state  = "waiting";
-	oCombatManager.turnControllerObject.nextPlayerTurn.id.state = "idle";
 
-	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+	// Set Player States
+	oCombatManager.turnControllerObject.currentPlayerTurn.id.state  = characterState.waiting;
+	oCombatManager.turnControllerObject.nextPlayerTurn.id.state = characterState.idle;
+
 	// Next Player
 	if (oCombatManager.turnControllerObject.currentTeamPlayerIndex < ds_list_size(oCombatManager.turnControllerObject.currentTeamTurn) - 1) {
 		oCombatManager.turnControllerObject.currentTeamPlayerIndex++;
@@ -31,7 +30,6 @@ else {
 		oCombatManager.turnControllerObject.currentTeamPlayerIndex	= 0;
 	}
 
-	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 	// Set Current Player, we need to update who the current player is
 	oCombatManager.turnControllerObject.currentPlayerTurn = ds_list_find_value(oCombatManager.turnControllerObject.currentTeamTurn, oCombatManager.turnControllerObject.currentTeamPlayerIndex);
 
