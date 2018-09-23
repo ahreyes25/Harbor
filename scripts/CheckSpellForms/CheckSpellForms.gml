@@ -12,10 +12,12 @@ var item	= false;
 var ind = oCombatManager.turnControllerObject.currentPlayerTurn.spellBook.index;
 var sp  = oCombatManager.turnControllerObject.currentPlayerTurn.spellBook.data[ind];
 	
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 // Check Spells
 if (action1Pressed && !oCombatManager.combatMenu.inSpellBook && oCombatManager.combatMenu.attacking && !oPuzzleBoard.inCombatMenu){
-	switch(global.spellData[sp, spellC.SpellID]){		
-		#region // Single
+	switch(global.spellData[sp, spellC.SpellID]){
+		// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+		// Single
 		case 0: 
 			coords = [
 				[cursorX, cursorY]
@@ -36,9 +38,9 @@ if (action1Pressed && !oCombatManager.combatMenu.inSpellBook && oCombatManager.c
 				}
 			}
 		break;
-		#endregion
 			
-		#region // Fireball
+		// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+		// Fireball
 		case 1: 
 			coords = [
 				[cursorX + 1, cursorY    ],
@@ -69,9 +71,9 @@ if (action1Pressed && !oCombatManager.combatMenu.inSpellBook && oCombatManager.c
 			if (pass)
 				cast = true;
 		break;
-		#endregion
 			
-		#region // Elemental
+		// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+		// elemental
 		case 2: 
 			coords = [
 				[cursorX,     cursorY    ],
@@ -115,9 +117,9 @@ if (action1Pressed && !oCombatManager.combatMenu.inSpellBook && oCombatManager.c
 				}
 			}
 		break;
-		#endregion
 			
-		#region // LightningBolt
+		// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+		// lightningBolt
 		case 3: 
 			// Check rotation Orientation
 			if (global.spellData[sp, spellC.FlipOrientation] == 1) { // not flipped
@@ -214,9 +216,9 @@ if (action1Pressed && !oCombatManager.combatMenu.inSpellBook && oCombatManager.c
 			if (pass)
 				cast = true;
 		break;
-		#endregion
 			
-		#region // Sprout
+		// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+		// sprout
 		case 4:
 			coords = [
 				[cursorX,     cursorY],
@@ -245,9 +247,9 @@ if (action1Pressed && !oCombatManager.combatMenu.inSpellBook && oCombatManager.c
 			if (pass)
 				cast = true;
 		break;
-		#endregion
 		
-		#region // Tsunami
+		// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+		// tsunami
 		case 5:
 			if (global.spellData[sp, spellC.FlipOrientation] == 1) {
 				coords = [
@@ -285,9 +287,9 @@ if (action1Pressed && !oCombatManager.combatMenu.inSpellBook && oCombatManager.c
 			if (pass)
 				cast = true;
 		break;
-		#endregion
 		
-		#region // Brushfire
+		// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+		// brushfire
 		case 6:
 			// check rotation orientation
 			switch(global.spellData[sp, spellC.Orientation]) {
@@ -359,9 +361,9 @@ if (action1Pressed && !oCombatManager.combatMenu.inSpellBook && oCombatManager.c
 			if (pass)
 				cast = true;
 		break;
-		#endregion
 		
-		#region // Thunderstorm
+		// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+		// thunderstorm
 		case 7:
 			coords = [
 				[cursorX,	  cursorY],
@@ -392,18 +394,20 @@ if (action1Pressed && !oCombatManager.combatMenu.inSpellBook && oCombatManager.c
 				}
 			}
 			
+			// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 			//If Valid
 			if (pass)
 				cast = true;
 		break;
-		#endregion
 	}
 }
 	
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 // Cast Spell
 if (cast)
 	CastSpell(coords);
-
+	
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 // Use item
 //if (item)
 //	UseItem(items, coords, cast); // pass items array, coordinates array, and check if we cast a spell

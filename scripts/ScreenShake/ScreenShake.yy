@@ -1,8 +1,8 @@
 {
-    "id": "9da1c21d-3b95-4645-b69c-47111822c4b8",
+    "id": "feb30750-e109-4d3b-b401-1fe07898402c",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "InBounds",
+    "name": "ScreenShake",
     "IsCompatibility": false,
     "IsDnD": false
 }

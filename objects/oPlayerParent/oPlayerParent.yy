@@ -1,23 +1,23 @@
 {
-    "id": "9927a5f9-b8e9-4538-96b1-886a63f86add",
+    "id": "6df115ff-0b24-41ec-ae8b-226cc1266606",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "oSpellBookMaster",
+    "name": "oPlayerParent",
     "eventList": [
         {
-            "id": "eb924ae6-3d3e-4069-8594-f41ed8fb7b4f",
+            "id": "23428e7b-cd6e-4f47-9ed4-0a020f3d31a7",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
             "collisionObjectId": "00000000-0000-0000-0000-000000000000",
             "enumb": 0,
             "eventtype": 0,
-            "m_owner": "9927a5f9-b8e9-4538-96b1-886a63f86add"
+            "m_owner": "6df115ff-0b24-41ec-ae8b-226cc1266606"
         }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": null,
-    "parentObjectId": "63d3c6be-cc64-4b5c-9d0e-b802dc7f0709",
+    "parentObjectId": "ecc816a7-80e5-4e3a-80d4-b8ab9a71cc9e",
     "persistent": false,
     "physicsAngularDamping": 0.1,
     "physicsDensity": 0.5,

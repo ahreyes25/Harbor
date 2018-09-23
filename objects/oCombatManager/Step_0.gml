@@ -1,5 +1,5 @@
 // If player turn, player must be in idle state
-if (turnControllerObject.currentPlayerTurn.id.state == characterState.idle) {
+if (turnControllerObject.currentPlayerTurn.id.state == "idle") {
 	UpdateDataReference();
 	
 	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 

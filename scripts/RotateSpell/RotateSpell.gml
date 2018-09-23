@@ -1,3 +1,4 @@
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 /// @description Rotate spell when in spell book only if specific spell allows for rotation
 Input();
 
@@ -5,6 +6,7 @@ var ind = oCombatManager.turnControllerObject.currentPlayerTurn.spellBook.index;
 var sp	= oCombatManager.turnControllerObject.currentPlayerTurn.spellBook.data[ind];
 
 if (oCombatManager.combatMenu.inSpellBook) {
+	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 	// Rotate right
 	if (rotateRight && global.spellData[sp, spellC.CanRotate]) {	
 		audio_play_sound(soRotateSpell, 0, 0);
@@ -24,6 +26,7 @@ if (oCombatManager.combatMenu.inSpellBook) {
 		}
 	}
 	
+	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 	// Rotate left
 	if (rotateLeft && global.spellData[sp, spellC.CanRotate]) {
 		audio_play_sound(soRotateSpell, 0, 0);

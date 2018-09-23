@@ -1,3 +1,4 @@
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 /// @description Create chain sign above puzzle elements
 /// @param x
 /// @param y
@@ -9,6 +10,7 @@ var rr = random_range(-2, 2);	// x & y random offset for variability
 var ind = oCombatManager.turnControllerObject.currentPlayerTurn.spellBook.index;
 var sp  = oCombatManager.turnControllerObject.currentPlayerTurn.spellBook.data[ind];
 
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 // Set chain sign color
 // If piece to chain and type match, then show piece to chain color
 if (global.spellData[sp, spellC.PieceToChain] == global.spellData[sp, spellC.SpellType])

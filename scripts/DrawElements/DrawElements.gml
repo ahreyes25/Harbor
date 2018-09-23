@@ -2,10 +2,13 @@
 // Individual pieces are responsible for their own logic and drawing
 var g = global.grid;
 
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+// Create shapes
 for (var i = 0; i < ds_grid_width(g); i++){
 	for (var j = 0; j < ds_grid_height(g); j++){
 		switch(ds_grid_get(g, i, j)){
-			#region // Fire
+			// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+			// Fire
 			case 1: 
 				draw_sprite_ext(sFire,  0,
 					GridToWorld(i, "x"), GridToWorld(j, "y"),
@@ -22,9 +25,9 @@ for (var i = 0; i < ds_grid_width(g); i++){
 					GridToWorld(i, "x"), GridToWorld(j, "y"),
 					1, 1, 0, c_white, 1);
 			break;
-			#endregion
 			
-			#region // Water
+			// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+			// Water
 			case 2:
 				draw_sprite_ext(sWater,  0,
 					GridToWorld(i, "x"), GridToWorld(j, "y"),
@@ -41,9 +44,9 @@ for (var i = 0; i < ds_grid_width(g); i++){
 					GridToWorld(i, "x"), GridToWorld(j, "y"),
 					1, 1, 0, c_white, 1);
 			break;
-			#endregion
 			
-			#region // Leaf
+			// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+			// Leaf
 			case 3:
 				draw_sprite_ext(sLeaf,  0,
 					GridToWorld(i, "x"), GridToWorld(j, "y"),
@@ -60,9 +63,9 @@ for (var i = 0; i < ds_grid_width(g); i++){
 					GridToWorld(i, "x"), GridToWorld(j, "y"),
 					1, 1, 0, c_white, 1);
 			break;
-			#endregion
 			
-			#region // Bolt
+			// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+			// Bolt
 			case 4:
 				draw_sprite_ext(sBolt,  0,
 					GridToWorld(i, "x"), GridToWorld(j, "y"),
@@ -82,9 +85,9 @@ for (var i = 0; i < ds_grid_width(g); i++){
 					GridToWorld(i, "x"), GridToWorld(j, "y"),
 					1, 1, 0, c_white, 1);
 			break;
-			#endregion
 			
-			#region // Potion
+			// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+			// Potion
 			case 5:
 				image_speed = 0.4;
 				draw_sprite_ext(sPotionItem,  image_index,
@@ -97,9 +100,9 @@ for (var i = 0; i < ds_grid_width(g); i++){
 					GridToWorld(i, "x"), GridToWorld(j, "y"),
 					1, 1, 0, c_white, 1);
 			break;
-			#endregion
 			
-			#region // Shuffle
+			// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+			// Shuffle
 			case 6:
 				image_speed = 0.4;
 				draw_sprite_ext(sShuffleItem,  image_index,
@@ -111,9 +114,9 @@ for (var i = 0; i < ds_grid_width(g); i++){
 					GridToWorld(i, "x"), GridToWorld(j, "y"),
 					1, 1, 0, c_white, 1);
 			break;
-			#endregion
 			
-			#region // Bottle
+			// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+			// Bottle
 			case 7:
 				image_speed = 0.4;
 				draw_sprite_ext(sBottleItem,  image_index,
@@ -125,7 +128,6 @@ for (var i = 0; i < ds_grid_width(g); i++){
 					GridToWorld(i, "x"), GridToWorld(j, "y"),
 					1, 1, 0, c_white, 1);
 			break;
-			#endregion
 		}
 	}
 }

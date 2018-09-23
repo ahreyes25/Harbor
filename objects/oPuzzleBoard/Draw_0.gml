@@ -3,7 +3,7 @@ if (!instance_exists(oRotatingSurfaceManager) && !instance_exists(oRotatingBoard
 		DrawBorder();
 		DrawElements();
 	
-		if (oCombatManager.turnControllerObject.currentPlayerTurn.id.state == characterState.idle)
+		if (oCombatManager.turnControllerObject.currentPlayerTurn.id.state == "idle")
 			DrawCursor();
 	}
 }
