@@ -1,0 +1,1 @@
+return (argument0 < oPuzzleBoard.gridWidth && argument1 < oPuzzleBoard.gridHeight);

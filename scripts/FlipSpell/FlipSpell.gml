@@ -1,4 +1,3 @@
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 /// @description Flip spell when in spell book only if specific spell allows for flipping
 Input();
 

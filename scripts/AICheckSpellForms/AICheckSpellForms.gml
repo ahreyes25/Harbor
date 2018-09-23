@@ -1,4 +1,3 @@
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 /// @description Check if current elements under the cursor match a spell configuration
 
 var coords  = [[]]; // xy grid positions of pieces to delete
@@ -12,11 +11,9 @@ var c;
 var ind = oCombatManager.turnControllerObject.currentPlayerTurn.spellBook.index;
 var sp  = oCombatManager.turnControllerObject.currentPlayerTurn.spellBook.data[ind];
 	
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 // Check Spells
 switch(global.spellData[sp, spellC.SpellID]){
-	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-	// Single
+	#region // Single
 	case 0: 
 		coords = [
 			[cursorX, cursorY]
@@ -31,12 +28,12 @@ switch(global.spellData[sp, spellC.SpellID]){
 			}
 		}
 	break;
+	#endregion
 			
-	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-	// Fireball
+	#region // Fireball
 	case 1: 
 		// Make sure we dont check out of bounds
-		if (cursorX + 2 < oPuzzleBoard.gridWidth && cursorY + 2 < oPuzzleBoard.gridHeight) {
+		if (InBounds(cursorX + 2, cursorY)) {
 			coords = [
 				[cursorX + 1, cursorY    ],
 				[cursorX,     cursorY + 1],
@@ -62,12 +59,12 @@ switch(global.spellData[sp, spellC.SpellID]){
 				cast = true;
 		}
 	break;
+	#endregion
 			
-	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-	// Elemental
+	#region // Elemental
 	case 2: 
 		// Make sure we dont check out of bounds
-		if (cursorX + 1 < oPuzzleBoard.gridWidth && cursorY + 1 < oPuzzleBoard.gridHeight) {
+		if (InBounds(cursorX + 1, cursorY + 1)) {
 			coords = [
 				[cursorX,     cursorY    ],
 				[cursorX + 1, cursorY    ],
@@ -97,12 +94,12 @@ switch(global.spellData[sp, spellC.SpellID]){
 				cast = true;
 		}
 	break;
+	#endregion
 			
-	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-	// LightningBolt
+	#region // LightningBolt
 	case 3: 
 		// Make sure we dont check out of bounds
-		if (cursorX + 2 < oPuzzleBoard.gridWidth && cursorY + 1 < oPuzzleBoard.gridHeight) {
+		if (InBounds(cursorX + 2, cursorY + 1)) {
 			coords = [ // rotated 0 not flipped
 				[cursorX,     cursorY + 1],
 				[cursorX + 1, cursorY + 1],
@@ -129,9 +126,9 @@ switch(global.spellData[sp, spellC.SpellID]){
 				cast = true;
 			}
 		}
-		// - - - - - - - - - - - - - - - - - - - - - - -
+
 		// Make sure we dont check out of bounds
-		if (cursorX + 1 < oPuzzleBoard.gridWidth && cursorY + 2 < oPuzzleBoard.gridHeight) {	
+		if (InBounds(cursorX + 1, cursorY + 2)) {	
 			coords = [ // rotated 90 not flipped
 				[cursorX,	  cursorY	 ],
 				[cursorX,	  cursorY + 1],
@@ -158,9 +155,9 @@ switch(global.spellData[sp, spellC.SpellID]){
 				cast = true;
 			}
 		}
-		// - - - - - - - - - - - - - - - - - - - - - - -
+
 		// Make sure we dont check out of bounds
-		if (cursorX + 2 < oPuzzleBoard.gridWidth && cursorY + 1 < oPuzzleBoard.gridHeight) {
+		if (InBounds(cursorX + 2, cursorY + 1)) {
 			coords = [ // rotated 180 not flipped
 				[cursorX,     cursorY + 1],
 				[cursorX + 1, cursorY + 1],
@@ -187,9 +184,9 @@ switch(global.spellData[sp, spellC.SpellID]){
 				cast = true;
 			}
 		}
-		// - - - - - - - - - - - - - - - - - - - - - - -
+
 		// Make sure we dont check out of bounds
-		if (cursorX + 1 < oPuzzleBoard.gridWidth && cursorY + 2 < oPuzzleBoard.gridHeight) {
+		if (InBounds(cursorX + 1, cursorY + 2)) {
 			coords = [ // rotate 270 not flipped
 				[cursorX,	  cursorY	 ],
 				[cursorX,	  cursorY + 1],
@@ -216,9 +213,9 @@ switch(global.spellData[sp, spellC.SpellID]){
 				cast = true;
 			}
 		}
-		// - - - - - - - - - - - - - - - - - - - - - - -
+
 		// Make sure we dont check out of bounds
-		if (cursorX + 2 < oPuzzleBoard.gridWidth && cursorY + 1 < oPuzzleBoard.gridHeight) {
+		if (InBounds(cursorX + 2, cursorY + 1)) {
 			coords = [ // rotated 0 and flipped
 				[cursorX,     cursorY],
 				[cursorX + 1, cursorY + 1],
@@ -245,9 +242,9 @@ switch(global.spellData[sp, spellC.SpellID]){
 				cast = true;
 			}
 		}
-		// - - - - - - - - - - - - - - - - - - - - - - -
+
 		// Make sure we dont check out of bounds
-		if (cursorX + 1 < oPuzzleBoard.gridWidth && cursorY + 2 < oPuzzleBoard.gridHeight) {
+		if (InBounds(cursorX + 1, cursorY + 2)) {
 			coords = [ // rotated 90 and flipped
 				[cursorX + 1, cursorY	 ],
 				[cursorX,	  cursorY + 1],
@@ -274,9 +271,9 @@ switch(global.spellData[sp, spellC.SpellID]){
 				cast = true;
 			}
 		}
-		// - - - - - - - - - - - - - - - - - - - - - - -
+
 		// Make sure we dont check out of bounds
-		if (cursorX + 2 < oPuzzleBoard.gridWidth && cursorY + 1 < oPuzzleBoard.gridHeight) {
+		if (InBounds(cursorX + 2, cursorY + 1)) {
 			coords = [ // rotated 180 and flipped
 				[cursorX,     cursorY	 ],
 				[cursorX + 1, cursorY	 ],
@@ -303,9 +300,9 @@ switch(global.spellData[sp, spellC.SpellID]){
 				cast = true;
 			}
 		}
-		// - - - - - - - - - - - - - - - - - - - - - - -
+
 		// Make sure we dont check out of bounds
-		if (cursorX + 1 < oPuzzleBoard.gridWidth && cursorY + 2 < oPuzzleBoard.gridHeight) {
+		if (InBounds(cursorX + 1, cursorY + 2)) {
 			coords = [ // rotate 270 and flipped
 				[cursorX + 1, cursorY	 ],
 				[cursorX,	  cursorY + 1],
@@ -333,12 +330,12 @@ switch(global.spellData[sp, spellC.SpellID]){
 			}
 		}
 	break;
+	#endregion
 		
-	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-	// Sprout
+	#region // Sprout
 	case 4:
 		// Make sure we dont check out of bounds
-		if (cursorX + 2 < oPuzzleBoard.gridWidth && cursorY + 1 < oPuzzleBoard.gridHeight) {
+		if (InBounds(cursorX + 2, cursorY + 1)) {
 			coords = [
 				[cursorX,     cursorY],
 				[cursorX + 2, cursorY],
@@ -365,12 +362,12 @@ switch(global.spellData[sp, spellC.SpellID]){
 			}
 		}
 	break;
+	#endregion
 		
-	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-	// Tsunami
+	#region // Tsunami
 	case 5:
 		// Make sure we dont check out of bounds
-		if (cursorX + 1 < oPuzzleBoard.gridWidth && cursorY + 1 < oPuzzleBoard.gridHeight) {
+		if (InBounds(cursorX + 1, cursorY + 1)) {
 			// Coords: Flip = 1
 			coords = [
 				[cursorX,	  cursorY],
@@ -398,9 +395,8 @@ switch(global.spellData[sp, spellC.SpellID]){
 			}
 		}
 			
-		// - - - - - - - - -
 		// Make sure we dont check out of bounds
-		if (cursorX + 1 < oPuzzleBoard.gridWidth && cursorY + 1 < oPuzzleBoard.gridHeight) {
+		if (InBounds(cursorX + 1, cursorY + 1)) {
 			// Coords: Flip = -1
 			coords = [
 				[cursorX,	  cursorY],
@@ -428,12 +424,12 @@ switch(global.spellData[sp, spellC.SpellID]){
 			}
 		}
 	break;
+	#endregion
 		
-	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-	// Brushfire
+	#region // Brushfire
 	case 6:
 		// Make sure we dont check out of bounds
-		if (cursorX + 2 < oPuzzleBoard.gridWidth && cursorY < oPuzzleBoard.gridHeight) {
+		if (InBounds(cursorX + 2, cursorY)) {
 			coords = [ // Coords Rotated: 0 || 180
 				[cursorX,	  cursorY],
 				[cursorX + 1, cursorY],
@@ -460,9 +456,9 @@ switch(global.spellData[sp, spellC.SpellID]){
 				cast = true;
 			}
 		}
-		// - - - - - - - - - - - - - - - - - - - - -
+		
 		// Make sure we dont check out of bounds
-		if (cursorX < oPuzzleBoard.gridWidth && cursorY + 2 < oPuzzleBoard.gridHeight) {
+		if (InBounds(cursorX, cursorY + 2)) {
 			coords = [ // Coords Rotated: 90 || 270
 				[cursorX, cursorY    ],
 				[cursorX, cursorY + 1],
@@ -490,12 +486,12 @@ switch(global.spellData[sp, spellC.SpellID]){
 			}
 		}
 	break;
+	#endregion
 		
-	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-	// Thunderstorm
+	#region // Thunderstorm
 	case 7:
 		// Make sure we dont check out of bounds
-		if (cursorX < oPuzzleBoard.gridWidth && cursorY + 1 < oPuzzleBoard.gridHeight) {
+		if (InBounds(cursorX, cursorY + 1)) {
 			coords = [
 				[cursorX,	  cursorY],
 				[cursorX, cursorY + 1],
@@ -519,9 +515,9 @@ switch(global.spellData[sp, spellC.SpellID]){
 			}
 		}
 	break;
+	#endregion
 }
 	
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 if (cast) {
 	return (global.spellData[sp, spellC.SpellID]);	
 }

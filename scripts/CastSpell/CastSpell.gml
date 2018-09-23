@@ -3,7 +3,7 @@
 var coords = argument0;
 
 // Set player to attacking				// DO NOT REMOVE .id
-oCombatManager.turnControllerObject.currentPlayerTurn.id.state = "chargingSpell";	
+oCombatManager.turnControllerObject.currentPlayerTurn.id.state = characterState.chargingSpell;	
 
 var ind = oCombatManager.turnControllerObject.currentPlayerTurn.spellBook.index;
 var sp  = oCombatManager.turnControllerObject.currentPlayerTurn.spellBook.data[ind];
@@ -18,7 +18,6 @@ oCombatManager.combatMenu.inSpellBook = true;
 // Play spell selection
 audio_play_sound(soSelectSpell, 0, 0);
 
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 // Animate Puzzle Piece
 for (var i = 0; i < array_length_2d(coords, 0); i++) {
 	var c = coords[0, i];
@@ -26,7 +25,6 @@ for (var i = 0; i < array_length_2d(coords, 0); i++) {
 		ds_grid_set(global.grid, c[0], c[1], ds_grid_get(global.grid, c[0], c[1]) + 10);
 }
 			
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 // Start TurnParent alarm chain
 if (oPuzzleBoard.alarm[0] == -1)
 	oPuzzleBoard.alarm[0] = oPuzzleBoard.whitePieceLength;

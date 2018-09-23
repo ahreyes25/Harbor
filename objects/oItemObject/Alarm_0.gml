@@ -1,16 +1,14 @@
 /// @description Bottle Rocket Item
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
 // Wait for attacking to finish
-if (oCombatManager.turnControllerObject.currentPlayerTurn.id.state != "usingItem") {
+if (oCombatManager.turnControllerObject.currentPlayerTurn.id.state != characterState.usingItem) {
 	alarm[0] = 1;	
 }
 
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 // Attacking is done
 else {
 	var r = choose(0, 1, 2, 3);
 
-	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 	// Left
 	if (r == 0) {
 		var bot = instance_create_layer(
@@ -28,7 +26,6 @@ else {
 		visible = false;
 	}
 	
-	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 	// Right
 	else if (r == 1) {
 		var bot = instance_create_layer(
@@ -46,7 +43,6 @@ else {
 		visible = false;
 	}
 	
-	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 	// Up
 	else if (r == 2) {
 		var bot = instance_create_layer(
@@ -64,7 +60,6 @@ else {
 		visible = false;
 	}
 	
-	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 	// Down 
 	else if (r == 3) {
 		var bot = instance_create_layer(

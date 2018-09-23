@@ -1,4 +1,3 @@
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 // If board is not currently rotating
 if (!instance_exists(oRotatingSurfaceManager) && !instance_exists(oRotatingBoard)) {
 	// It is a friendly turn

@@ -5,7 +5,6 @@ teams		= ds_list_create();
 ds_list_add(teams, friendlies);
 ds_list_add(teams, enemies);
 
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 // Tracking Turns
 currentTeamPlayerIndex	= 0;
 currentTeamIndex		= 0;

@@ -1,4 +1,3 @@
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 // Rotate the board into and out of the combat menu
 
 if (!instance_exists(oRotatingSurfaceManager) && !instance_exists(oRotatingBoard)) {

@@ -1,4 +1,3 @@
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 // Modify the current index of the current spell book
 Input();
 if (!oPuzzleBoard.inCombatMenu && oCombatManager.combatMenu.attacking && oCombatManager.combatMenu.inSpellBook) {

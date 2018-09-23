@@ -3,14 +3,12 @@ damageToDeal = 0;
 ind = oCombatManager.turnControllerObject.currentPlayerTurn.spellBook.index;
 sp  = oCombatManager.turnControllerObject.currentPlayerTurn.spellBook.data[ind];
 
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 // Facing
 if (oCombatManager.turnControllerObject.currentTeamTurn == oCombatManager.turnControllerObject.friendlies)
 	image_xscale = 1;
 else
 	image_xscale = -1;
 
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 // Set Sprite
 if (global.spellData[sp, spellC.SpellID] == 0) {
 	if (oPuzzleBoard.basicSpellSound == 1) { // basic fire
@@ -31,7 +29,6 @@ else
 image_index = 0;
 image_speed = 1.0;
 
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 // Spell Sound
 // Check for chargesound
 if (global.spellData[sp, spellC.HasChargeSound]) {
@@ -39,7 +36,6 @@ if (global.spellData[sp, spellC.HasChargeSound]) {
 	audio_play_sound(s, 0, 0);
 }
 
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 // Set Sound Delay to sync spell sound with animation
 alarm[0] = global.spellData[sp, spellC.SoundDelay];
 

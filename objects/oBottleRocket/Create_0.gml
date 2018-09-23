@@ -3,7 +3,6 @@ gridX = noone;
 gridY = noone;
 type  = noone;
 
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 // Particle settings
 effect	= part_system_create();
 p		= part_type_create();

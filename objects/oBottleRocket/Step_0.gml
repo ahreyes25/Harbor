@@ -8,8 +8,7 @@ var cBlue   = make_color_rgb(0, 170, 255);
 var cGreen  = make_color_rgb(0, 241, 0);
 var cYellow = make_color_rgb(255, 242, 0);
 
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-// Right
+#region // Right
 if (dir == "right") {
 	if (x < room_width + 10)
 		x+= bottleSpeed;
@@ -48,9 +47,9 @@ if (dir == "right") {
 	part_type_direction(p, 180, 180, 0, 15);
 	part_particles_create(effect, x, y, p, 50);
 }
+#endregion
 
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-// Down
+#region // Down
 else if (dir == "down") {
 	if (y < room_height + 10)
 		y+= bottleSpeed;
@@ -89,9 +88,9 @@ else if (dir == "down") {
 	part_type_direction(p, 90, 90, 0, 15);
 	part_particles_create(effect, x, y, p, 50);
 }
+#endregion
 
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-// Left
+#region // Left
 else if (dir == "left") {
 	if (x > -10)
 		x -= bottleSpeed;
@@ -130,9 +129,9 @@ else if (dir == "left") {
 	part_type_direction(p, 0, 0, 0, 15);
 	part_particles_create(effect, x, y, p, 50);
 }
+#endregion
 
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-// Up
+#region // Up
 else if (dir == "up") {
 	if (y > -10)
 		y-= bottleSpeed;
@@ -171,8 +170,8 @@ else if (dir == "up") {
 	part_type_direction(p, 270, 270, 0, 15);
 	part_particles_create(effect, x, y, p, 30);
 }
+#endregion
 
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 // destroy once out of room
 if (x > room_width ||
 	x < 0 ||
@@ -182,7 +181,6 @@ if (x > room_width ||
 		instance_destroy();
 	}
 	
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 // Set depth 
 if (instance_exists(oSpellObject))
 	depth = oSpellObject.depth + 1;

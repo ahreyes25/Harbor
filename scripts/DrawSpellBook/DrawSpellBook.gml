@@ -4,14 +4,12 @@ Input();
 var ind = oCombatManager.turnControllerObject.currentPlayerTurn.spellBook.index;
 var sp  = oCombatManager.turnControllerObject.currentPlayerTurn.spellBook.data[ind];
 
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 // Get rotation
 if (global.spellData[sp, spellC.CanRotate])
 	var rot	= global.spellData[sp, spellC.Orientation];
 else 
 	var rot = 0;
 	
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 // Get flip orientation
 if (global.spellData[sp, spellC.CanFlip])
 	var flp = global.spellData[sp, spellC.FlipOrientation];
@@ -22,30 +20,25 @@ var spr = asset_get_index("s" + string(global.spellData[sp, spellC.SpellName]) +
 image_speed = 0.05;
 draw_sprite_ext(spr, -1, room_width / 2 - 21, 63, flp, 1, rot, c_white, 1);
 
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 // Draw White Outline for Spell
 var sprStill = asset_get_index("s" + string(global.spellData[sp, spellC.SpellName]) + "SpellFrame");
 if (oCombatManager.combatMenu.inSpellBook)
 	draw_sprite_ext(sprStill, 0, room_width / 2 - 21, 63, flp, 1, rot, c_white, 1);
-	
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
 // Update color if player is in spellBook
 if (oCombatManager.combatMenu.inSpellBook)
 	var c = c_white;
 else
 	var c = make_color_rgb(29, 43, 83);
-	
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
 // Draw Spell title
 var title = global.spellData[sp, spellC.SpellName];
 draw_text_transformed_color(room_width / 2 - 3, 57, title, 0.30, 0.30, 0, c, c, c, c, 1.0);	
 	
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 // Draw spell info 
 var desc = global.spellData[sp, spellC.SpellInfo];
 draw_text_transformed_color(room_width / 2 - 3, 62, desc,  0.30, 0.30, 0, c, c, c, c, 1.0);	
 
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 // Draw rotate button
 if (oCombatManager.turnControllerObject.currentTeamTurn == oCombatManager.turnControllerObject.friendlies) {
 	if (global.spellData[sp, spellC.CanRotate]) {
@@ -66,7 +59,6 @@ if (oCombatManager.turnControllerObject.currentTeamTurn == oCombatManager.turnCo
 		}
 	}
 
-	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 	// Draw flip button
 	if (global.spellData[sp, spellC.CanFlip]) {
 		var framex = room_width / 2 - 20;
@@ -87,7 +79,6 @@ if (oCombatManager.turnControllerObject.currentTeamTurn == oCombatManager.turnCo
 	}
 }
 
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 // Draw Spell Book Arrows
 if(oCombatManager.combatMenu.inSpellBook) {
 	// Press Right

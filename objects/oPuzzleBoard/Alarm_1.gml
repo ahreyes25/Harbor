@@ -56,6 +56,6 @@ else {
 								  oCombatManager.turnControllerObject.nextPlayerTurn.y - 10,
 								  "PointsLayer", oText);
 		t.text = "Missed!";
-		oCombatManager.turnControllerObject.currentPlayerTurn.id.state = "usingItem";
+		oCombatManager.turnControllerObject.currentPlayerTurn.id.state = characterState.usingItem;
 	}
 }	

@@ -1,3 +1,2 @@
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 // Combat Menu Navigation
 CombatMenuNavigation();

@@ -1,5 +1,5 @@
 /// @description Moving to Spell
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
 // Check if position is correct
 if (global.gridIndexX != spellCursorX || global.gridIndexY != spellCursorY) {
 	if (global.gridIndexX < spellCursorX)
@@ -16,7 +16,6 @@ if (global.gridIndexX != spellCursorX || global.gridIndexY != spellCursorY) {
 	alarm[2] = irandom_range(2, 12);	
 }
 
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 // at spell location
 else {
 	// Cast Spell
