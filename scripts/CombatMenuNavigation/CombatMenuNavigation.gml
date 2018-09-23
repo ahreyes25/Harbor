@@ -1,6 +1,8 @@
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 // Basic Combat Menu Navigation From Option to Option and Cycling 
 // Between Characters In the Combat Menu
 
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 // Currently in Menu
 if (oPuzzleBoard.inCombatMenu && !oCombatManager.combatMenu.attacking && !oCombatManager.combatMenu.inSpellBook) { // && !inActionMenu && !inSpellMenu && !inItemMenu) {
 	Input();

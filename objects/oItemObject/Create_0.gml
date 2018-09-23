@@ -7,6 +7,7 @@ itemSound = false;
 moveToPlayer = false;
 owner = noone;
 
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 // Particle settings
 trail	= part_system_create();
 p		= part_type_create();

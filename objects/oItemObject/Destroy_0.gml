@@ -1,5 +1,6 @@
 /// @description Item Effect
 
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 // Potion
 if (type == 5) {
 	target.currentHealth += 5;
@@ -9,12 +10,14 @@ if (type == 5) {
 	alarm[2] = 15;
 }
 
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 // Shuffle
 else if (type == 6) {
 	ShuffleBoard();
 	audio_play_sound(soShuffle, 0, 0);
 }
 
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 // Bottle
 else if (type == 7) {
 	audio_stop_sound(soBottleRocketClick);

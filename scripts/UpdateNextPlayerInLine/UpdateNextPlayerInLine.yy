@@ -1,5 +1,5 @@
 {
-    "id": "39c25e60-7246-472e-b243-bb49bc5d7860",
+    "id": "cf003d6e-8fba-49cd-abd9-fde509c6a615",
     "modelName": "GMScript",
     "mvc": "1.0",
     "name": "UpdateNextPlayerInLine",

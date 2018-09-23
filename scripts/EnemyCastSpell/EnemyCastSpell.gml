@@ -17,8 +17,8 @@ var g = global.grid;
 var ind = oCombatManager.turnControllerObject.currentPlayerTurn.spellBook.index;
 var sp  = oCombatManager.turnControllerObject.currentPlayerTurn.spellBook.data[ind];
 
-switch(stc) {
-	#region // Single
+switch (stc) {
+	// Single
 	case 0: 
 		coords = [
 			[cursorX, cursorY]
@@ -39,9 +39,8 @@ switch(stc) {
 			}
 		}
 	break;
-	#endregion
 			
-	#region // Fireball
+	// Fireball
 	case 1: 
 		coords = [
 			[cursorX + 1, cursorY    ],
@@ -72,9 +71,8 @@ switch(stc) {
 		if (pass)
 			cast = true;
 	break;
-	#endregion
 			
-	#region // Elemental
+	// elemental
 	case 2: 
 		coords = [
 			[cursorX,     cursorY    ],
@@ -116,9 +114,8 @@ switch(stc) {
 		if (red && blue && green && yellow)
 			cast = true;
 	break;
-	#endregion
 			
-	#region // LightningBolt
+	// lightningBolt
 	case 3: 
 		// Check rotation Orientation
 		if (global.spellData[sp, spellC.FlipOrientation] == 1) { // not flipped
@@ -215,9 +212,8 @@ switch(stc) {
 		if (pass)
 			cast = true;
 	break;
-	#endregion
 			
-	#region // Sprout
+	// sprout
 	case 4:
 		coords = [
 			[cursorX,     cursorY],
@@ -246,9 +242,8 @@ switch(stc) {
 		if (pass)
 			cast = true;
 	break;
-	#endregion
 		
-	#region // Tsunami
+	// tsunami
 	case 5:
 		if (global.spellData[sp, spellC.FlipOrientation] == 1) {
 			coords = [
@@ -286,9 +281,8 @@ switch(stc) {
 		if (pass)
 			cast = true;
 	break;
-	#endregion
 		
-	#region // Brushfire
+	// brushfire
 	case 6:
 		// check rotation orientation
 		switch(global.spellData[sp, spellC.Orientation]) {
@@ -360,9 +354,8 @@ switch(stc) {
 		if (pass)
 			cast = true;
 	break;
-	#endregion
 		
-	#region // Thunderstorm
+	// thunderstorm
 	case 7:
 		coords = [
 			[cursorX,	  cursorY],
@@ -397,9 +390,9 @@ switch(stc) {
 		if (pass)
 			cast = true;
 	break;
-	#endregion
 }
 
+//-----------------------------------------
 // Cast Spell
 if (cast)
 	CastSpell(coords);

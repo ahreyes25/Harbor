@@ -1,5 +1,5 @@
 /// @description Potion Item
-if (oCombatManager.turnControllerObject.currentPlayerTurn.id.state != characterState.usingItem) {
+if (oCombatManager.turnControllerObject.currentPlayerTurn.id.state != "usingItem") {
 	alarm[3] = 1;
 }
 else {

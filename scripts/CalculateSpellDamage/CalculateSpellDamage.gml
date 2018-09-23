@@ -1,3 +1,4 @@
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 /// @description Gather spell low and high damage and randomly compute a value between that range
 
 var ind = oCombatManager.turnControllerObject.currentPlayerTurn.spellBook.index;

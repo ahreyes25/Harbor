@@ -15,6 +15,7 @@ var cont = false;
 for (var i = 0; i < ww; i++) {
 	for (var j = 0; j < hh; j++) {
 		if (ds_grid_get(global.pGrid, i, j) == (w - 1)) {
+			// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 			// Check left
 			if (i - 1 >= 0) { // check for index out of bounds
 				if (ds_grid_get(global.pGrid, i - 1, j) == -1 && // check for no priority
@@ -24,6 +25,7 @@ for (var i = 0; i < ww; i++) {
 				}
 			}
 			
+			// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 			// Check right
 			if (i + 1 <= oPuzzleBoard.gridWidth - 1) { // check for index out of bounds
 				if (ds_grid_get(global.pGrid, i + 1, j) == -1 && // check for no priority
@@ -32,7 +34,8 @@ for (var i = 0; i < ww; i++) {
 						cont = true;
 				}
 			}
-
+			
+			// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 			// Check up
 			if (j - 1 >= 0) { // check for index out of bounds
 				if (ds_grid_get(global.pGrid, i, j - 1) == -1 && // check for no priority
@@ -42,6 +45,7 @@ for (var i = 0; i < ww; i++) {
 				}
 			}
 			
+			// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 			// Check down
 			if (j + 1 <= oPuzzleBoard.gridHeight - 1) { // check for index out of bounds
 				if (ds_grid_get(global.pGrid, i, j + 1) == -1 && // check for no priority
@@ -54,4 +58,6 @@ for (var i = 0; i < ww; i++) {
 	}
 }
 
-if (cont) Wave(w + 1, c);
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+if (cont)
+	Wave(w + 1, c);
